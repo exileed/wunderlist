@@ -87,7 +87,7 @@ class Wunderlist {
 
         // We build the request
         // passing any parameter (if any).
-        $request = $this->http->createRequest($httpMethod, $this->baseUrl . $endpoint, $parameters);
+        $request = $this->http->request($httpMethod, $this->baseUrl . $endpoint, $parameters);
 
         // We send the request.
         $response = $this->http->send($request);

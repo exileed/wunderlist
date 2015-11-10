@@ -59,7 +59,7 @@ Optionally add an alias to make it easier to use the library. Open config/app.ph
 'Wunderlist'  =>  JohnRivs\Wunderlist\Laravel\Facades\Wunderlist::class
 ```
 
-Step 3: Publish Configuration File
+#####Step 3: Publish Configuration File
 
 Open your terminal window and fire the following command to publish config file to your config directory:
 
