@@ -37,6 +37,42 @@ If you're using a framework, everything in your `vendor` directory is most likel
 require_once __DIR__.'/path/to/vendor/autoload.php';
 ```
 
+
+### Laravel Additional Steps
+
+If you're using Laravel and would like to use the SDK with it, then follow the below instructions. Otherwise, you can skip this part.
+
+#####Step 1: Add the Service Provider
+
+Open config/app.php and, to your providers array at the bottom, add:
+
+```
+JohnRivs\Wunderlist\Laravel\WunderlistServiceProvider::class
+```
+
+#####Step 2: Add Facade (Optional)
+
+
+Optionally add an alias to make it easier to use the library. Open config/app.php and, to your "aliases" array at the bottom, add:
+
+```
+'Wunderlist'  =>  JohnRivs\Wunderlist\Laravel\Facades\Wunderlist::class
+```
+
+Step 3: Publish Configuration File
+
+Open your terminal window and fire the following command to publish config file to your config directory:
+
+```
+php artisan vendor:publish --provider="JohnRivs\Wunderlist\Laravel\WunderlistServiceProvider"
+```
+
+OR
+
+```
+php artisan vendor:publish
+```
+
 ##### Build up the client
 Go back to [apps page](https://developer.wunderlist.com/apps ) and copy your app's 'CLIENT ID', 'CLIENT SECRET' and access token, which you can generate by clicking on 'CREATE ACCESS TOKEN':
 ```php
